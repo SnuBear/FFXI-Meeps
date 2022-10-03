@@ -34,13 +34,13 @@ xi.settings.main =
     ENABLE_ABYSSEA   = 1,
     ENABLE_SOA       = 1,
     ENABLE_ROV       = 1,
-    ENABLE_VOIDWATCH = 1, -- Not an expansion, but has its own storyline. (Not Implemented)
+    ENABLE_VOIDWATCH = 0, -- Not an expansion, but has its own storyline. (Not Implemented)
 
     -- FIELDS OF VALOR/Grounds of Valor settings
     ENABLE_FIELD_MANUALS  = 1, -- Enables Fields of Valor
     ENABLE_GROUNDS_TOMES  = 1, -- Enables Grounds of Valor
-    ENABLE_SURVIVAL_GUIDE = 1, -- Enables Survival Guides (Not Implemented)
-    REGIME_WAIT           = 1, -- Make people wait till 00:00 game time as in retail. If it's 0, there is no wait time.
+    ENABLE_SURVIVAL_GUIDE = 0, -- Enables Survival Guides (Not Implemented)
+    REGIME_WAIT           = 0, -- Make people wait till 00:00 game time as in retail. If it's 0, there is no wait time.
     FOV_REWARD_ALLIANCE   = 0, -- Allow Fields of Valor rewards while being a member of an alliance. (default retail behavior: 0)
     GOV_REWARD_ALLIANCE   = 1, -- Allow Grounds of Valor rewards while being a member of an alliance. (default retail behavior: 1)
 
@@ -86,9 +86,9 @@ xi.settings.main =
     MAX_LEVEL                      = 99, -- Level max of the server, lowers the attainable cap by disabling Limit Break quests.
     NORMAL_MOB_MAX_LEVEL_RANGE_MIN = 0,  -- Lower Bound of Max Level Range for Normal Mobs (0 = Uncapped)
     NORMAL_MOB_MAX_LEVEL_RANGE_MAX = 0,  -- Upper Bound of Max Level Range for Normal Mobs (0 = Uncapped)
-    START_GIL                      = 10, -- Amount of gil given to newly created characters.
+    START_GIL                      = 1000, -- Amount of gil given to newly created characters.
     START_INVENTORY                = 30, -- Starting inventory and satchel size.  Ignores values < 30.  Do not set above 80!
-    NEW_CHARACTER_CUTSCENE         = 1,  -- Set to 1 to enable opening cutscenes, 0 to disable.
+    NEW_CHARACTER_CUTSCENE         = 0,  -- Set to 1 to enable opening cutscenes, 0 to disable.
     SUBJOB_QUEST_LEVEL             = 18, -- Minimum level to accept either subjob quest.  Set to 0 to start the game with subjobs unlocked.
     ADVANCED_JOB_LEVEL             = 30, -- Minimum level to accept advanced job quests.  Set to 0 to start the game with advanced jobs.
     ALL_MAPS                       = 0,  -- Set to 1 to give starting characters all the maps.
@@ -98,11 +98,11 @@ xi.settings.main =
     GIL_RATE        = 1.000, -- Multiplies gil earned from quests.  Won't always display in game.
     BAYLD_RATE      = 1.000, -- Multiples bayld earned from quests.
     -- Note: EXP rates are also influenced by conf setting
-    EXP_RATE        = 1.000, -- Multiplies exp from script (except FoV/GoV).
-    BOOK_EXP_RATE   = 1.000, -- Multiplies exp from FoV/GoV book pages.
-    TABS_RATE       = 1.000, -- Multiplies tabs earned from fov.
-    ROE_EXP_RATE    = 1.000, -- Multiplies exp earned from records of eminence.
-    SPARKS_RATE     = 1.000, -- Multiplies sparks earned from records of eminence.
+    EXP_RATE        = 2.000, -- Multiplies exp from script (except FoV/GoV).
+    BOOK_EXP_RATE   = 2.000, -- Multiplies exp from FoV/GoV book pages.
+    TABS_RATE       = 2.000, -- Multiplies tabs earned from fov.
+    ROE_EXP_RATE    = 2.000, -- Multiplies exp earned from records of eminence.
+    SPARKS_RATE     = 2.000, -- Multiplies sparks earned from records of eminence.
     CURE_POWER      = 1.000, -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
     ELEMENTAL_POWER = 1.000, -- Multiplies damage dealt by Elemental and non-drain Dark Magic.
     DIVINE_POWER    = 1.000, -- Multiplies damage dealt by Divine Magic.
@@ -117,10 +117,10 @@ xi.settings.main =
     ENABLE_TRUST_CASTING = 1,
     ENABLE_TRUST_QUESTS  = 1,
 
-    HARVESTING_BREAK_CHANCE = 33, -- % chance for the sickle to break during harvesting.  Set between 0 and 100.
-    EXCAVATION_BREAK_CHANCE = 33, -- % chance for the pickaxe to break during excavation.  Set between 0 and 100.
-    LOGGING_BREAK_CHANCE    = 33, -- % chance for the hatchet to break during logging.  Set between 0 and 100.
-    MINING_BREAK_CHANCE     = 33, -- % chance for the pickaxe to break during mining.  Set between 0 and 100.
+    HARVESTING_BREAK_CHANCE = 10, -- % chance for the sickle to break during harvesting.  Set between 0 and 100.
+    EXCAVATION_BREAK_CHANCE = 10, -- % chance for the pickaxe to break during excavation.  Set between 0 and 100.
+    LOGGING_BREAK_CHANCE    = 10, -- % chance for the hatchet to break during logging.  Set between 0 and 100.
+    MINING_BREAK_CHANCE     = 10, -- % chance for the pickaxe to break during mining.  Set between 0 and 100.
     HARVESTING_RATE         = 50, -- % chance to recieve an item from haresting.  Set between 0 and 100.
     EXCAVATION_RATE         = 50, -- % chance to recieve an item from excavation.  Set between 0 and 100.
     LOGGING_RATE            = 50, -- % chance to recieve an item from logging.  Set between 0 and 100.
@@ -176,7 +176,7 @@ xi.settings.main =
     AQUAVEIL_COUNTER                = 1,     -- Base amount of hits Aquaveil absorbs to prevent spell interrupts. Retail is 1.
     ABSORB_SPELL_AMOUNT             = 8,     -- how much of a stat gets absorbed by DRK absorb spells - expected to be a multiple of 8.
     ABSORB_SPELL_TICK               = 9,     -- duration of 1 absorb spell tick
-    SNEAK_INVIS_DURATION_MULTIPLIER = 1,     -- multiplies duration of sneak, invis, deodorize to reduce player torture. 1 = retail behavior.
+    SNEAK_INVIS_DURATION_MULTIPLIER = 3,     -- multiplies duration of sneak, invis, deodorize to reduce player torture. 1 = retail behavior.
     USE_OLD_CURE_FORMULA            = false, -- true/false. if true, uses older cure formula (3*MND + VIT + 3*(healing skill/5)) // cure 6 will use the newer formula
     USE_OLD_MAGIC_DAMAGE            = false, -- true/false. if true, uses older magic damage formulas
 
